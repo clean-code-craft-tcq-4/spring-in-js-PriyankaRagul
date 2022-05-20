@@ -27,7 +27,7 @@ class StatsAlerter {
 	this.ledAlert=alerters[1];
   }
   checkAndAlert(numbers) {
-    const arrMax = Math.max(...numbers);
+    const arrMax = Math.max(...numbers) ;
     		if (arrMax > this.maxThreshold) {
 		  this.emailAlert.emailSent = true;
 		  this.ledAlert.ledGlows = true;
