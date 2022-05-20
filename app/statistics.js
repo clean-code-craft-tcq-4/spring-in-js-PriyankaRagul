@@ -7,19 +7,19 @@ module.exports=function getStatistics(numbers){
     let output ={"min":arrMin,"max":arrMax,"average":arrAvg}
     return output;
 }
-module.exports=class EmailAlert {
+class EmailAlert {
 	constructor(){
 		this.emailSent=false
 	}
 }
 
-module.exports=class LEDAlert {
+class LEDAlert {
 	constructor(){
 		this.ledGlows=false
 	}
 }
 
-module.exports=class StatsAlerter {
+class StatsAlerter {
   constructor(maxThreshold, alerters) {
     this.maxThreshold=maxThreshold;
 	this.emailAlert=alerters[0];
