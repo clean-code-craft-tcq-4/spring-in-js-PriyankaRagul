@@ -7,30 +7,14 @@ module.exports=function getStatistics(numbers){
     let output ={"min":arrMin,"max":arrMax,"average":arrAvg}
     return output;
 }
-class EmailAlert {
-	constructor(){
-		this.emailSent=false
-	}
+
+module.exports=function EmailAlert(){
+	this.emailSent=false;
+	return this.emailSent;
 }
 
-class LEDAlert {
-	constructor(){
-		this.ledGlows=false
-	}
-}
 
-class StatsAlerter {
-  constructor(maxThreshold, alerters) {
-    this.maxThreshold=maxThreshold;
-	this.emailAlert=alerters[0];
-	this.ledAlert=alerters[1];
-  }
-  checkAndAlert(numbers) {
-    const arrMax = Math.max(...numbers);
-    		if (arrMax > this.maxThreshold) {
-		  this.emailAlert.emailSent = true;
-		  this.ledAlert.ledGlows = true;
-		}
-  }
+module.exports=function LEDAlert(){
+	this.ledGlows=false
+	return this.ledGlows;
 }
-
